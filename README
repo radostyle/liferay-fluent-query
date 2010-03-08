@@ -45,7 +45,7 @@ Using this, a query like this:
 
 becomes
 
-	public List<Long> findCustomerAddressesByCustomerCode(String customerCode) {
+	public List<CustomerAddress> findCustomerAddressesByCustomerCode(String customerCode) {
 		return withSessionFactory(this).withQuery(
 			"select customer, customerAddress from "
 				+ Customer.class.getName() + " as customer, " + CustomerAddress.class.getName()
